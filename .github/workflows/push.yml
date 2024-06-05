@@ -1,9 +1,9 @@
 on: push
 name: deploy
-jobs: 
-    name: deploy to cluster
-    runs-on: ubuntu-latest
-    steps:
+jobs:
+    deploy-to-cluster:
+        runs-on: ubuntu-latest
+        steps:
         - uses: actions/checkout@master
         - name: build and push to docker
           uses: docker/build-push-action@v1
